@@ -5,15 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock, Paper, Scissor</title>
 
 </head>
 
-<body>
+<body onload="gameStart()">
+    <div class="content">
+        <div id="scoreRound" style="width: 100%; text-align: center; margin-top: 0;">
+            <h2> .</h2>
+        </div>
+        <div class="top">
 
+            <div class="left">
+                <div class="selection" id="playerSign">
+
+                </div>
+                <div class="player">
+                    <h1>PLAYER</h1>
+                    <div class="lives-container" id="playerHearts"></div>
+                    <!--  <div class="lives-container"><img class="lives" src="assetes/heart.png" alt="heart"><img
+                            class="lives" src="assetes/heart.png" alt="heart"><img class="lives" src="assetes/heart.png"
+                            alt="heart"><img class="lives" src="assetes/heart.png" alt="heart"><img class="lives"
+                            src="assetes/heart.png" alt="heart">
+                    </div> -->
+                </div>
+
+            </div>
+            <h1>VS</h1>
+            <div class="right">
+                <div class="selection" id="computerSign">
+                </div>
+                <div class="player">
+                    <h1>COMPUTER</h1>
+                    <div class="lives-container" id="computerHearts"></div>
+                    <!--  <div class="lives-container">
+                        <img class="lives" id="heart1" src="assetes/heart.png" alt="heart">
+                        <img class="lives" id="heart2" src="assetes/heart.png" alt="heart">
+                        <img class="lives" id="heart3" src="assetes/heart.png" alt="heart">
+                        <img class="lives" id="heart4" src="assetes/heart.png" alt="heart">
+                        <img class="lives" id="heart5" src="assetes/heart.png" alt="heart">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <h1>CHOOSE YOUR WEAPON</h1>
+
+            <div class="button-selection">
+                <input type="image" src="assetes/Rock.png" alt="Rock" id="rockBtn">
+                <h2 class="show">ROCK</h2>
+                </input>
+                <input type="image" src="assetes/Paper.png" alt="Paper" id="paperBtn">
+                <h2 class="show">PAPER</h2>
+                </input>
+                <input type="image" src="assetes/Scissor.png" alt="Scissor" id="scissorsBtn">
+                <h2 class="show">SCISSOR</h2>
+                </input>
+            </div>
+        </div>
 </body>
 
 <script src="main.js"></script>
-<!--<script src="week.js"></script>-->
+<!-- 
+<script src="week.js"></script> -->
 
 </html>
