@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-color: #ddd;
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.content{
+    max-width: 80vw;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.player h1{
+    margin-bottom: 0;
+    font-size: 4rem;
+}
+
+.lives{
+    padding: 10px;
+    width: 40px;
+}
+.selection{
+    width: 160px;
+    height: 160px;
+    border: 8px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+input{
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 40px;
+}
+
+/* //https://pretagteam.com/question/hover-on-one-div-affect-another */
+.show{
+    opacity: 0;
+}
+
+input:hover .show{
+    opacity: 0.5;
+}
+input:hover{
+    opacity: 0.5;
+}
+
+
+
+.lives-container{
+    display: flex;
+    
+}
+
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button-selection{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
