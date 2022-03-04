@@ -61,7 +61,7 @@ function playRound(playerSelection) {
     if (playerSelection === computerSelection) {
         console.log("Its a tie");
         scoreRound.innerHTML = '<h2>ITS A TIE</h2>'
-    } else if (playerSelection == "ROCK" && computerSelection == "PAPER" || playerSelection == "SCISSOR" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection === "SCISSOR") {
+    } else if (playerSelection == "ROCK" && computerSelection == "PAPER" || playerSelection == "SCISSORS" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "SCISSORS") {
         console.log("The computer wins");
         playerScore--;
 
