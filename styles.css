@@ -4,9 +4,7 @@
 body {
     background-color: #ddd;
     font-family: 'VT323', monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
 }
 .top{
     margin-top: 4%;
@@ -18,7 +16,10 @@ body {
 }
 
 .content{
-    max-width: 80vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1{
     font-size: 6rem;
@@ -59,7 +60,7 @@ input{
     border: none;
     background: none;
     cursor: pointer;
-    margin: 40px;
+   
 }
 
 /* //https://pretagteam.com/question/hover-on-one-div-affect-another */
@@ -78,6 +79,7 @@ input:hover{
 
 .lives-container{
     display: flex;
+    width: 300px;
     
 }
 
@@ -87,11 +89,13 @@ input:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    height: 300px;
 }
 .button-selection{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 32vw;
 }
 
 .left{
@@ -104,4 +108,52 @@ input:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .overlay.active {
+    display: flex;
+  }
+
+  .endgame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    padding-bottom: 80px;
+    border-radius: 8px;    
+    width: 20%;
+    
+
+}
+.btn-restart{
+    font-size: 32px;
+    width: 60%;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+button{
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+  background-color: black;
+  color: #fff;
 }

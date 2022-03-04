@@ -12,12 +12,16 @@ const paperBtn = document.getElementById('paperBtn')
 const scissorsBtn = document.getElementById('scissorsBtn')
 const playerHeart = document.getElementById('playerHearts')
 const computerHeart = document.getElementById('computerHearts')
+const restartBtn = document.getElementById('restartBtn')
+const overlay = document.getElementById('overlay')
+const endgameTitle = document.getElementById('endgame-title')
 
 
 
 rockBtn.addEventListener('click', () => playRound('ROCK'))
 paperBtn.addEventListener('click', () => playRound('PAPER'))
 scissorsBtn.addEventListener('click', () => playRound('SCISSORS'))
+restartBtn.addEventListener('click', restartGame)
 
 function gameStart() {
     playerHeart.innerHTML = '<img class="lives" src="assetes/heart.png" alt="heart"/>'.repeat(playerScore)
@@ -72,21 +76,17 @@ function playRound(playerSelection) {
         console.log("computer score= " + computerScore + " " + "player socre =" + playerScore)
         scoreRound.innerHTML = '<h2>YOU WIN</h2>'
     }
+    if (computerScore < 1) {
+        console.log("computer lost")
+        announce()
+        endgameTitle.textContent = "You Won 🎉"
+    } else if (playerScore < 1) {
+        console.log("you lost")
+        announce()
+        endgameTitle.textContent = "You Lost 😣"
+    }
 
 }
-
-///Score Loser
-/* if (computerScore < 1) {
-    console.log("computer lost")
-} else {
-    computerHeart.innerHTML = '<img class="lives" src="assetes/heart.png" alt="heart"/>'.repeat(computerScore)
-}
-if (playerScore < 1) {
-    console.log("you lost")
-} else {
-    playerHeart.innerHTML = '<img class="lives" src="assetes/heart.png" alt="heart"/>'.repeat(playerScore)
-} */
-
 
 
 
@@ -117,3 +117,15 @@ function updateChoices(playerSelection, computerSelection) {
             break
     }
 };
+
+
+
+function announce() {
+    overlay.classList.add('active')
+}
+function restartGame() {
+    playerScore = 5
+    computerScore = 5
+    location.reload();
+}
+
