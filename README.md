@@ -1,3 +1,3 @@
 # rock-paper-scissor
 
-[Preview](https://uxmauro.com/rock-paper-scissor) 👀
+[Preview](https://uxmauro.github.io/rock-paper-scissor) 👀
